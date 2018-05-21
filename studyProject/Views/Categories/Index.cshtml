@@ -1,0 +1,53 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+
+<div class="row" id="categories">
+   
+    <div class="col-md-5">
+        <div class="treenodecreatebutton">
+            @Html.ActionLink("Create New", "Create",null, new { @class= "btn btn-success" })
+        </div>
+        @Html.Raw(@Model)
+    </div>
+</div>
+
+
+
+
+
+
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Parent.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Parent.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>*@

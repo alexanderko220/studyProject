@@ -1,0 +1,42 @@
+﻿@model studyProject.Models.ServiceItem
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Service Item</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-md-2">
+            @Html.DisplayNameFor(model => model.ServiceItemCode)
+        </dt>
+
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.ServiceItemCode)
+        </dd>
+
+        <dt class="col-md-2">
+            @Html.DisplayNameFor(model => model.ServiceItemName)
+        </dt>
+
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.ServiceItemName)
+        </dd>
+
+        <dt class="col-md-2">
+            @Html.DisplayNameFor(model => model.Rate)
+        </dt>
+
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.Rate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ServiceItemId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

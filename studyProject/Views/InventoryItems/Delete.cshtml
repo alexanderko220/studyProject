@@ -1,0 +1,56 @@
+﻿@model studyProject.Models.InventoryItem
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Inventory Item</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-md-2">
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </dt>
+
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+
+        <dt class="col-md-2">
+            @Html.DisplayNameFor(model => model.InventoryItemCode)
+        </dt>
+
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.InventoryItemCode)
+        </dd>
+
+        <dt class="col-md-2">
+            @Html.DisplayNameFor(model => model.InventoryItemName)
+        </dt>
+
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.InventoryItemName)
+        </dd>
+
+        <dt class="col-md-2">
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </dt>
+
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.UnitPrice)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="">
+            <input type="submit" value="Delete" class="btn btn-outline-danger" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

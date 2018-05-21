@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title – application ASP.NET</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+     @Scripts.Render("~/bundles/modernizr")
+
+    <meta name="description" content="The description of my page" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark img_top">
+
+        <a class="navbar-brand" href="/">Strategy One</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" style="">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "nav-link" })</li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Security</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-item">@Html.ActionLink("Roles", "Index", "ApplicationRoles", null, new { @class = "nav-link" })</li>
+                        <li class="dropdown-item">@Html.ActionLink("Users", "Index", "ApplicationUsers", null, new { @class = "nav-link" })</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="False">Catalog</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-item">@Html.ActionLink("Categories", "Index", "Categories", null, new { @class = "nav-link" })</li>
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-item">@Html.ActionLink("Inventory Items", "Index", "InventoryItems", null, new { @class = "nav-link" })</li>
+                        <li class="dropdown-item">@Html.ActionLink("Service Items", "Index", "ServiceItems", null, new { @class = "nav-link" })</li>
+                    </ul>
+                </li>
+                <li class="nav-item">@Html.ActionLink("Customers", "Index", "Customers", null, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Work Orders", "Index", "WorkOrders", null, new { @class = "nav-link" })</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        @RenderBody()
+        <hr />
+    </div>
+
+    <footer>
+        <section class="background_footer">
+            <div class="row text-white container ">
+                <div class="col-md-3">
+                    <h5 class="pb-3">
+                        Address
+                    </h5>
+                    <p>
+                        1234 Street Name
+                        <br>City, AA 99999
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="pb-3">
+                        Contacts
+                    </h5>
+                    <p >
+                        Email: support@mobirise.com
+                        <br>Phone: +1 (0) 000 0000 001
+                        <br>Fax: +1 (0) 000 0000 002
+                    </p>
+                </div>
+
+            </div>
+            <div class="container-fluid">
+                <p>&copy; @DateTime.Now.Year &nbsp; Strategy One - Let's Talk Business</p>
+            </div>
+        </section>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
