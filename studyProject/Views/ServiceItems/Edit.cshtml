@@ -11,40 +11,41 @@
 {
     @Html.AntiForgeryToken()
 
-    <h4>Service Item</h4>
+    
     <hr />
-    <div>
-        
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.ServiceItemId)
+    <div class="row">
+        <div class="col-md-8">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.ServiceItemId)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ServiceItemCode, htmlAttributes: new { @class = "col-md-2" })
-            <div class="col-sm-6">
-                @Html.EditorFor(model => model.ServiceItemCode, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ServiceItemCode, "", new { @class = "text-danger" })
+            <div class="form-group row">
+                @Html.LabelFor(model => model.ServiceItemCode, htmlAttributes: new { @class = "col-md-2" })
+                <div class="col-sm-6">
+                    @Html.EditorFor(model => model.ServiceItemCode, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ServiceItemCode, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ServiceItemName, htmlAttributes: new { @class = "col-md-2" })
-            <div class="col-sm-6">
-                @Html.EditorFor(model => model.ServiceItemName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ServiceItemName, "", new { @class = "text-danger" })
+            <div class="form-group row">
+                @Html.LabelFor(model => model.ServiceItemName, htmlAttributes: new { @class = "col-md-2" })
+                <div class="col-sm-6">
+                    @Html.EditorFor(model => model.ServiceItemName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ServiceItemName, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Rate, htmlAttributes: new { @class = "col-md-2" })
-            <div class="col-sm-6">
-                @Html.EditorFor(model => model.Rate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Rate, "", new { @class = "text-danger" })
+            <div class="form-group row">
+                @Html.LabelFor(model => model.Rate, htmlAttributes: new { @class = "col-md-2" })
+                <div class="col-sm-6">
+                    @Html.EditorFor(model => model.Rate, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Rate, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="col-sm-6">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="form-group row">
+                <div class="offset-2 col-sm-6">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
             </div>
         </div>
     </div>

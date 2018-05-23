@@ -115,7 +115,7 @@ namespace studyProject.Controllers
             return selectList;
 
         }
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
             //var categories = _applicationDbContext.Categories.Include(c => c.Parent);
             //return View(await categories.ToListAsync());

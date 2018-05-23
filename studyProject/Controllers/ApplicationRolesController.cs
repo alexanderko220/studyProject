@@ -115,7 +115,7 @@ namespace studyProject.Controllers
                 return HttpNotFound();
             }
             ApplicationRoleViewModel applicationroleViewModel = new ApplicationRoleViewModel { Id = applicationRole.Id, Name = applicationRole.Name };
-            return View(applicationRole);
+            return View(applicationroleViewModel);
         }
 
         // POST: ApplicationRoles/Edit/5

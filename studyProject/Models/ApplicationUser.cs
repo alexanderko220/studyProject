@@ -33,7 +33,7 @@ namespace studyProject.Models
         [StringLength(10)]
         public string ZipCode { get; set; }
         public List<WorkOrder> WorkOrders { get; set; }
-
+        [Display(Name = "Full Name")]
         public string FullName
         {
             get { return FirstName + " " + LastName; }
